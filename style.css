@@ -42,7 +42,9 @@ header{
     font-size: 30px;
 }
 .fundo_banner{
+
     width: 100%;
+
 }
 
 main{
@@ -235,8 +237,9 @@ footer span{
         height: 600px;
     }
     .fundo_banner{
-        height: 100%;
-        width: auto;
+        height: 600px;
+        width: 100%;
+        object-fit: cover;
     }
     .box_conteudo{
         top: 145px;
