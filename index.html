@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
+    <script src="https://kit.fontawesome.com/fa6968a204.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="container container_header">
-            <nav class="menu_header">
+            <nav id="links" class="menu_header">
                 <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
+                <a href="#container_sobre">Sobre</a>
                 <a href="#desafios">Desafios</a>
                 <a href="#endereco">Endereço</a>
+                <a href="#" onclick="botaoDoMenu()">Fechar</a>
+
             </nav>
+            <a class="btn_menu" href="#" onclick="botaoDoMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
         </div>
     </header>
+
     <main>
         <section id="inicio" class="container_banner">
             <img class="fundo_banner" src="imagem-fundo-banner.png" alt="banner de fundo">
             <div class="box_conteudo">
-                <h1>Desenvolvimento de sitemas 2021</h1>
+                <h1>Desenvolvimento de sistemas 2021</h1>
                 <hr class="hr_banner">
                 <span>Senai informática</span>
                 <img class="icone_mouse" src="mouse.svg" alt="">
             </div>
         </section>
-        <section id="sobre" class="container_sobre">
-            <div class="container espaçamento_sobre">
+
+        <section id="container_sobre" class="container_sobre">
+            <div class="container espacamento_sobre">
                 <h2 class="h2_sobre">Sobre os projetos</h2>
                 <div class="box_sobre">
                     <img class="img_box_sobre" src="imagem-seção-sobre.png" alt="banner da seção sobre">
@@ -41,6 +51,7 @@
                 </div>
             </div>
         </section>
+
         <section id="desafios" class="info">
         <div class="container container_info">
             <div>
@@ -65,18 +76,34 @@
             </div>
         </div>
         </section>
+
         <section id="endereco" class="endereco">
-            <div>
-            <h2>endereço</h2>
+            <h2>endereço:</h2>
                 <div class="box_endereco">
-                    <p>Alameda Barão de Limeira, 539 Santa Cecilia, São Paulo - SP CEP: 01202-001</p>
+                    <p>Alameda Barão de Limeira, 539
+                        Santa Cecilia, São Paulo - SP
+                        CEP: 01202-001</p>  
                 </div>
-            </div>
                 <img src="./mapa.png" alt="mapa">   
         </section>
     </main>
+    
     <footer>
         <span>Copyright © 2020 - Escola Senai de Informática</span>
     </footer>
+    
+    <script>
+        function botaoDoMenu() {
+            var menu = document.getElementById("links");
+            if (menu.style.display === "flex") {
+                // Esconda o menu
+                menu.style.display = "none";
+            } else {
+                // Mostre o menu
+                menu.style.display = "flex";
+            }
+        }
+    </script>
 </body>
+
 </html>
